@@ -44,3 +44,11 @@ body {
   background-color: #DFE1E3;
   
 }
+.float-right{
+  float: right;
+}
+.center{
+left: 50%;
+position: fixed;
+margin-left: -200px;
+}
