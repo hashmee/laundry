@@ -11,6 +11,7 @@ end
 
 def create
 	@bill = Bill.new(bill_params)
+	@bill.status = "pending"
 	if @bill.save
 		redirect_to bills_path, notice: 'bill added successfully'
     else
@@ -42,6 +43,7 @@ def get_bill
 end
 
 def bill_params
-	params.require (:bill).permit(:name, :delivery_date, :fare, :advance)
+	#params.require(:bill).permit(:name, :delivery_date, :fare, :advance)
+	params.require(:bill).permit(:name, :mobile, :delivery_date, :fare, :advance, :status)
 end
 end

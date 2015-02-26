@@ -1,0 +1,27 @@
+<%= simple_form_for(@bill) do |f|%>
+<div class="col-md-10">
+<div class="well">
+<div class="container">
+	<form class="form-horizontal">
+	<legend>New Bill</legend>
+	<div class="form-group">
+        <%= f.label :name%></br>
+	<%= f.text_field :name, :placeholder => 'Customer name...'%>
+	</div>
+	<div class="form-group">
+<%= f.label :mobile%>	</br>
+	<%= f.text_field :mobile, :placeholder => 'mobile'%></div>
+	<div class="form-group">
+<%= f.label :fare%></br>	
+	<%= f.text_field :fare%></div>
+	<div class="form-group">
+<%= f.label :Advance%>	</br><%= f.text_field :advance%></div>
+	<div class="form-group"><%= f.input :delivery_date%></div>
+	<div class="form-group"><%= f.button :submit, class: 'btn btn-primary'%></div>
+    
+	</form>
+</div>
+</div>
+</div>
+<%end%>
+
